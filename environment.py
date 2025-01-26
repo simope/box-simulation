@@ -2,7 +2,7 @@ import random
 
 from entities import Entity
 from config import Config as c
-
+from constants import Colors
 
 class Environment:
     def __init__(self, width, height, num_entities):
@@ -36,3 +36,10 @@ class Environment:
         #         new_entities.append(new_entity)
         
         # self.entities.extend(new_entities)
+
+    def render_dashboard(self, screen, font):
+        num_entities = len(self.entities)
+        text_surface = font.render(f'Entities: {num_entities}', True, Colors.WHITE)
+        screen.blit(text_surface, (10, 10))
+        
+
