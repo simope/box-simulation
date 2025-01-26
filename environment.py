@@ -23,7 +23,7 @@ class Environment:
             entity.move(self.width, self.height)
             for other in self.entities:
                 if entity != other:
-                    entity.eat(other)
+                    entity.interact(other)
 
         # Remove dead entities
         self.entities = [e for e in self.entities if e.alive]
