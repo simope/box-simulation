@@ -13,7 +13,7 @@ class Environment:
                 x=random.randint(0, width),
                 y=random.randint(0, height),
                 speed=c.ENTITY_SPEED,
-                size=c.ENTITY_SIZE,
+                level=c.ENTITY_STARTING_LEVEL,
             )
             for _ in range(num_entities)
         ]
