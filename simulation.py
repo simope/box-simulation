@@ -22,7 +22,8 @@ def run_simulation():
         env.render_dashboard(screen, font)
 
         for entity in env.entities:
-            pygame.draw.circle(screen, Colors.GREEN, (entity.x, entity.y), entity.size)
+            circle_size_offset = 5
+            pygame.draw.circle(screen, entity.color, (entity.x, entity.y), entity.level + circle_size_offset)
         
         pygame.display.flip()
         clock.tick(c.FPS)
